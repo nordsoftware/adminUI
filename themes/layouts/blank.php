@@ -1,5 +1,5 @@
 <?php
-use app\assets\AppAsset;
+use backend\assets\AppAsset;
 use yii\adminUi\assetsBundle\AdminUiAsset;
 use yii\helpers\Html;
 use yii\adminUi\widget\Header;

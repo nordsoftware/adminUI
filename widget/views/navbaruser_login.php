@@ -15,8 +15,8 @@ if($type=='topbar'){
 	<li class="user-header bg-light-blue">
 		<img src="<?php echo $bundle->baseUrl?>/img/avatar3.png" class="img-circle" alt="User Image" />
 		<p>
-			<?=Yii::$app->user->identity->firstname?> - <?=Yii::$app->user->identity->groupName?>
-                        <small><?php echo (Yii::$app->user->identity->createdOn) ? 'Member since '.date('M. Y',  strtotime(Yii::$app->user->identity->createdOn)) : '';?></small>
+			<?=Yii::$app->user->identity->username?>
+                        <small><?php echo (Yii::$app->user->identity->createdAt) ? 'Member since '.date('M. Y',  strtotime(Yii::$app->user->identity->createdAt)) : '';?></small>
 		</p>
 	</li>
         <?php /*/?>
@@ -48,7 +48,7 @@ if($type=='topbar'){
         <img src="<?php echo $bundle->baseUrl?>/img/avatar3.png" class="img-circle" alt="User Image" />
     </div>
     <div class="pull-left info">
-        <p>Hello, <?=  Html::a(Yii::$app->user->identity->fullname, ['/profile/default/index'])?></p>
+        <p>Hello, <?=  Html::a(Yii::$app->user->identity->username, ['/profile/default/index'])?></p>
 
         <i class="fa fa-circle text-success"></i> Online
     </div>
