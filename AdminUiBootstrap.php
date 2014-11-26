@@ -7,7 +7,6 @@
 namespace yii\adminUi;
 
 use Yii;
-use yii\base\Application;
 use yii\base\BootstrapInterface;
 use yii\web\Controller;
 use yii\base\Event;
@@ -16,6 +15,7 @@ class AdminUiBootstrap implements BootstrapInterface
 {
     public function bootstrap($app)
     {
+
         \Yii::$classMap = array_merge(
             \Yii::$classMap,
             [
@@ -28,14 +28,14 @@ class AdminUiBootstrap implements BootstrapInterface
             [
                 'class' => 'yii\web\View',
                 'theme' => [
-                    'pathMap' => ['@backend/views' => '@backend/themes/adminui'],
+                    'pathMap' => [
+                        '@backend/views' => '@backend/themes/adminui'
+                    ],
                     // for Admin theme which resides on extension/adminui
                     //'baseUrl' => '@web/themes/adminui',
                 ],
             ]
         );
-
-
         $app->set(
             'assetManager',
             [
